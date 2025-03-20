@@ -10,26 +10,28 @@ const Header = () => {
   const [open, setOpen] = useState(false)
   return <header>
     <div className="">
-      <div className='flex justify-evenly items-center text-black bg-[#F5F5DC] shadow py-3.5'>
-        <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3'>
+      <div className='flex justify-between items-center text-black bg-[#F5F5DC] shadow py-3 pr-[7vw] pl-[6vw]'>
+        <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3 mt-2'>
           <img src={logo} alt="" className='w-[206px] h-[84px]'/>
         </a>
-        <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3'>
-          <img src={castle} alt="" className='w-11'/>
-          <p>Home</p>
-        </a>
-        <a href="#" className='flex justify-between items-center text-2xl font-bold gap-2'>
-          <img src={camera} alt="" className='w-13'/>
-          <p>Take a shot</p>
-        </a>
-        <a href="#" className='flex justify-between items-center text-2xl font-bold gap-2'>
-          <img src={shop} alt="" className='w-11'/>
-          <p>Shop</p>
-        </a>
-        <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3'>
-          <img src={dots} alt="" className='w-11'/>
-          <p>More</p>
-        </a>
+        <div className='flex justify-between items-center gap-[3vw]'>
+          <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3'>
+            <img src={castle} alt="" className='w-11'/>
+            <p>Home</p>
+          </a>
+          <a href="#" className='flex justify-between items-center text-2xl font-bold gap-2'>
+            <img src={camera} alt="" className='w-13'/>
+            <p>Take a shot</p>
+          </a>
+          <a href="#" className='flex justify-between items-center text-2xl font-bold gap-2'>
+            <img src={shop} alt="" className='w-11'/>
+            <p>Shop</p>
+          </a>
+          <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3'>
+            <img src={dots} alt="" className='w-11'/>
+            <p>More</p>
+          </a>
+        </div>
         <a href="#" className='flex justify-between items-center text-2xl font-bold gap-2'>
           <img src={account} alt="" className='w-11'/>
           <p>Sign In | Sign Up</p>
