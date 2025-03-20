@@ -10,11 +10,11 @@ const Header = () => {
   const [open, setOpen] = useState(false)
   return <header>
     <div className="">
-      <div className='flex justify-between items-center text-black bg-[#F5F5DC] shadow py-3 pr-[7vw] pl-[6vw]'>
+      <div className='flex justify-between items-center text-black bg-[#F5F5DC] shadow-xl py-3 pr-[7vw] pl-[6vw]'>
         <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3 mt-2'>
           <img src={logo} alt="" className='w-[206px] h-[84px]'/>
         </a>
-        <div className='flex justify-between items-center gap-[3vw]'>
+        <div className='flex justify-between items-center gap-[2.8vw]'>
           <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3'>
             <img src={castle} alt="" className='w-11'/>
             <p>Home</p>
