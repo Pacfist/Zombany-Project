@@ -11,3 +11,7 @@ open new terminal
 
 cd backend
 npm start
+
+
+todo list:
+finish navbar mobile
