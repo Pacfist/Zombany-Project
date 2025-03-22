@@ -1,12 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 @import "tailwindcss";
 body {
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+}
+.layout {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  background-image: url("/images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main {
+  margin-top: -100px;
+  width: 100%;
+  height: 100%;
 }
 .container {
-  max-width: 1280px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 0px 10px;
+  height: 100%;
+}
+section {
+  height: 100dvh;
+  width: 100%;
+  position: relative;
+}
+section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 4px;
+  height: 80%;
+  background-color: #00000010;
+}
 
+section::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 4px;
+  height: 80%;
+  background-color: #00000010;
+}
+:root {
+  --color-yellow: #ffeb3b;
+  --color-blue: #03a9f4;
+  --color-green: #4caf50;
+  --color-orange: #ff9800;
+}
+.custom-shadow {
+  box-shadow: 4px 6px 0 1px #ada02a;
 }
