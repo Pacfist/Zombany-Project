@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import profilePic from "../public/icons/avocado1.svg"; // ✅ Use any profile image
+import profilePic from "../public/icons/avocado1.svg"; // ✅ Move this to assets
 
 const Profile = () => {
     const [name, setName] = useState("Avocado Andy");
@@ -7,7 +7,8 @@ const Profile = () => {
     const [points, setPoints] = useState(120);
     const [foodPreference, setFoodPreference] = useState("");
     const [submitted, setSubmitted] = useState(false);
-    const [editing, setEditing] = useState(false); // Toggle edit mode
+    const [editing, setEditing] = useState(false);
+    const [subscribed, setSubscribed] = useState(false); // ✅ Subscription state
 
     const handleProfileSubmit = (e) => {
         e.preventDefault();
@@ -17,6 +18,11 @@ const Profile = () => {
     const handleFoodSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
+    };
+
+    const handleSubscribe = () => {
+        // You can integrate Stripe/PayPal here later
+        setSubscribed(true);
     };
 
     return (
@@ -105,6 +111,33 @@ const Profile = () => {
                         </p>
                     )}
                 </form>
+
+                {/* Subscription Section */}
+                <div className="mt-10 w-full border-t pt-6">
+                    <h2 className="text-2xl font-semibold mb-2 text-center">🌟 Premium Subscription</h2>
+                    <p className="text-sm text-gray-700 text-center mb-4">
+                        Get access to advanced features:
+                    </p>
+                    <ul className="text-gray-800 text-sm list-disc list-inside mb-4">
+                        <li>🔓 Extra customization options for your Avocado</li>
+                        <li>📷 Upload a photo of your food — AI suggests healthy recipes</li>
+                        <li>📊 Instant calorie, protein, and nutrient breakdown</li>
+                        <li>🤖 Personalized AI coaching based on your goals and preferences</li>
+                    </ul>
+
+                    {subscribed ? (
+                        <p className="text-green-600 font-bold text-center">You're subscribed! ✅</p>
+                    ) : (
+                        <a
+                            href="https://buy.stripe.com/test_bIY5l364Cd853YI3cc"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-center w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition"
+                        >
+                            Subscribe Now - 10CAD/month
+                        </a>
+                    )}
+                </div>
             </div>
         </div>
     );
