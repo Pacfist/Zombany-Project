@@ -1,0 +1,22 @@
+<svg width="107" height="122" viewBox="0 0 107 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="49" y1="105.908" x2="49" y2="116.908" stroke="#3E8C41" stroke-width="10" stroke-linecap="round"/>
+<line x1="29" y1="100.908" x2="29" y2="111.908" stroke="#3E8C41" stroke-width="10" stroke-linecap="round"/>
+<line x1="5.87019" y1="62.0345" x2="5.12652" y2="91.0378" stroke="#4CAF50" stroke-width="10" stroke-linecap="round"/>
+<path d="M94.0246 60.4919C94.0246 85.5745 72.9765 105.908 47.0123 105.908C21.0481 105.908 0 85.5745 0 60.4919C0 35.4094 21.0481 15.0759 47.0123 15.0759C72.9765 15.0759 94.0246 35.4094 94.0246 60.4919Z" fill="#3E8C41"/>
+<path d="M92.959 50.4307C81.8763 67.0837 61.6631 73.6096 47.8116 65.0068C33.9601 56.4039 31.7155 35.9299 42.7982 19.2769C53.8809 2.62388 74.0941 -3.90204 87.9456 4.70084C101.797 13.3037 104.042 33.7777 92.959 50.4307Z" fill="#3E8C41"/>
+<path d="M87.4429 58.7895C87.4429 83.1555 67.8681 102.908 43.7214 102.908C19.5748 102.908 0 83.1555 0 58.7895C0 34.4236 19.5748 14.6711 43.7214 14.6711C67.8681 14.6711 87.4429 34.4236 87.4429 58.7895Z" fill="#4CAF50"/>
+<path d="M86.4518 49.0158C76.1449 65.193 57.3467 71.5325 44.4648 63.1754C31.5829 54.8183 29.4954 34.9293 39.8023 18.7521C50.1093 2.57485 68.9075 -3.76462 81.7894 4.59247C94.6713 12.9496 96.7587 32.8385 86.4518 49.0158Z" fill="#4CAF50"/>
+<circle cx="29" cy="59.9079" r="21" fill="#F5F5DC"/>
+<circle cx="52.5" cy="25.4079" r="9.5" fill="black"/>
+<circle cx="73.5" cy="38.4079" r="9.5" fill="black"/>
+<path d="M73.248 31.908C75.5411 32.4983 80.0684 34.9247 79.8328 39.908" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<path d="M91 7.63892C92.3919 5.72341 96.3127 2.40515 100.86 4.45621" stroke="#3E8C41" stroke-width="3" stroke-linecap="round"/>
+<path d="M51 19.5282C53.3676 19.491 58.3754 20.6335 59.4662 25.5016" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<path d="M50.5 40.4079C50.5 43.4079 52.6 48.9079 61 46.9079" stroke="black" stroke-linecap="round"/>
+<ellipse cx="23.3724" cy="47.4079" rx="2.06892" ry="2.82552" transform="rotate(38.1475 23.3724 47.4079)" fill="white"/>
+<line x1="24.4056" y1="48.7518" x2="27.8438" y2="51.5024" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<line x1="1" y1="-1" x2="5.40312" y2="-1" transform="matrix(0.780869 -0.624695 -0.624695 -0.780869 23 45.9079)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<line x1="22.1562" y1="48.3135" x2="19.4056" y2="51.7518" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<line x1="22.5858" y1="46.9079" x2="20" y2="44.3222" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<line x1="74.8702" y1="81.0345" x2="74.1265" y2="110.038" stroke="#4CAF50" stroke-width="10" stroke-linecap="round"/>
+</svg>
