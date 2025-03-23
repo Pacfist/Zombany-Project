@@ -33,10 +33,10 @@ const Header = () => {
             <p>More</p>
           </a>
         </div>
-        <a href="#" className='flex justify-between items-center text-2xl font-bold gap-2'>
+        <Link to="/profile" className='flex justify-between items-center text-2xl font-bold gap-2'>
           <img src={account} alt="" className='w-11' />
-          <p>Sign In | Sign Up</p>
-        </a>
+          <p>Profile</p>
+        </Link>
       </div>
     </div>
   </header>;
