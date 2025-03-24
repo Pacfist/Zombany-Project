@@ -8,7 +8,6 @@ function AppLayout() {
   return (
     <div className="layout">
       {isLoading && <Loader />}
-
       <Header />
       <main>
         <div className="container">
