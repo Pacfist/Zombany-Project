@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Module from "../components/Module";
 import Modal from "../components/Modal";
-
+import Avocado from "../components/Avocado";
 const Home = () => {
   const [isStepActive, setIsStepActive] = useState(false);
   const [modalContent, setModalContent] = useState("");
@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <section className="home">
-      <Module onStepClick={handleStepClick} length={7} />
+      <Module onStepClick={handleStepClick} length={8} />
       <Modal
         stepStatus={isStepActive}
         onClose={handleCloseModal}
@@ -35,6 +35,7 @@ const Home = () => {
           </div>
         }
       />
+      <Avocado />
     </section>
   );
 };

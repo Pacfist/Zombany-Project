@@ -36,9 +36,9 @@ section::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
+  left: -20px;
   width: 4px;
-  height: 80%;
+  height: 70%;
   background-color: #00000010;
 }
 
@@ -47,9 +47,9 @@ section::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: -20px;
   width: 4px;
-  height: 80%;
+  height: 70%;
   background-color: #00000010;
 }
 :root {
@@ -60,4 +60,42 @@ section::after {
 }
 .custom-shadow {
   box-shadow: 4px 6px 0 1px #ada02a;
+}
+.visited-shadow {
+  box-shadow: 4px 6px 0 1px #aa5d04;
+}
+
+.avocado-container {
+  position: fixed;
+  top: 50%;
+  left: 150%;
+  animation: moveToCenter 5s ease-in-out forwards;
+}
+
+.avocado-animation {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes moveToCenter {
+  from {
+    left: 150%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+.fade-out {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.avocado-animation.fade-in {
+  opacity: 1;
 }

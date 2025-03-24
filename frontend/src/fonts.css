@@ -26,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-wheat:before {
+  content: "\e908";
+}
 .icon-account:before {
   content: "\e900";
 }
