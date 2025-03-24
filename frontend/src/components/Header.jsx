@@ -1,3 +1,4 @@
+
 import React, { Component, useState } from 'react';
 import {motion} from "framer-motion"
 import camera from "../public/icons/camera-svgrepo-com1.svg"
@@ -21,17 +22,42 @@ const Header = () => {
             <img src={castle} alt="" className='w-11'/>
             <p>Home</p>
           </a>
-          <a href="#" className='flex justify-between items-center text-2xl font-bold gap-2'>
-            <img src={camera} alt="" className='w-13'/>
-            <p>Take a shot</p>
-          </a>
-          <a href="#" className='flex justify-between items-center text-2xl font-bold gap-2'>
-            <img src={shop} alt="" className='w-11'/>
-            <p>Shop</p>
-          </a>
-          <a href="#" className='flex justify-between items-center text-2xl font-bold gap-3'>
-            <img src={dots} alt="" className='w-11'/>
-            <p>More</p>
+          <div className="flex justify-between items-center gap-[2.8vw]">
+            <a
+              href="#"
+              className="flex justify-between items-center text-2xl font-bold gap-3"
+            >
+              <img src={castle} alt="" className="w-11" />
+              <p>Home</p>
+            </a>
+            <a
+              href="#"
+              className="flex justify-between items-center text-2xl font-bold gap-2"
+            >
+              <img src={camera} alt="" className="w-13" />
+              <p>Take a shot</p>
+            </a>
+            <a
+              href="#"
+              className="flex justify-between items-center text-2xl font-bold gap-2"
+            >
+              <img src={shop} alt="" className="w-11" />
+              <p>Shop</p>
+            </a>
+            <a
+              href="#"
+              className="flex justify-between items-center text-2xl font-bold gap-3"
+            >
+              <img src={dots} alt="" className="w-11" />
+              <p>More</p>
+            </a>
+          </div>
+          <a
+            href="#"
+            className="flex justify-between items-center text-2xl font-bold gap-2"
+          >
+            <img src={account} alt="" className="w-11" />
+            <p>Sign In | Sign Up</p>
           </a>
         </div>
         <a href="#" className='hidden xl:flex justify-between items-center text-2xl font-bold gap-2'>
@@ -78,8 +104,8 @@ const Header = () => {
         </ul>
       </div>
       </div>
-    </div>
-  </header>;
+    </header>
+  );
 };
 
 export default Header;
