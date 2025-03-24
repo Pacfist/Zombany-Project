@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Step = ({
   onStepClick,
@@ -14,7 +14,9 @@ const Step = ({
       alert("This step is not unlocked yet.");
       return;
     }
-    onStepClick();
+
+    // Pass information about crown click to the parent component
+    onStepClick(finalElement);
     setVisited(visited.map((v, i) => (i === index ? true : v)));
   };
 

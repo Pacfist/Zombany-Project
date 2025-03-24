@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Step from "./Step";
 import Path from "./Path";
 
-const Module = ({ onStepClick, length }) => {
+const Module = ({ onStepClick, length, onVisitedChange }) => {
   const stepSpacing = 200; // Distance between steps
   const [visited, setVisited] = useState(Array(length).fill(false));
-  console.log(visited);
+
+  // When visited state changes, notify parent component
+  useEffect(() => {
+    if (onVisitedChange) {
+      onVisitedChange(visited);
+    }
+  }, [visited, onVisitedChange]);
+
   return (
     <div className="module w-full h-full relative">
       {Array.from({ length }).map((_, index) => (

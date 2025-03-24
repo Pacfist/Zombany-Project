@@ -67,9 +67,10 @@ section::after {
 
 .avocado-container {
   position: fixed;
+  opacity: 1;
   top: 50%;
   left: 150%;
-  animation: moveToCenter 5s ease-in-out forwards;
+  animation: moveToCenter 3s ease-in-out forwards;
 }
 
 .avocado-animation {
@@ -80,9 +81,89 @@ section::after {
 @keyframes moveToCenter {
   from {
     left: 150%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
   }
   to {
-    left: 50%;
+    left: 90%;
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  from {
+    top: 50%;
+    left: 90%;
+  }
+  to {
+    top: 30%;
+    left: 80%;
+  }
+}
+@keyframes moveDown {
+  from {
+    top: 30%;
+    left: 80%;
+  }
+  to {
+    top: 50%;
+    left: 68%;
+  }
+}
+
+@keyframes moveUp3 {
+  from {
+    top: 50%;
+    left: 68%;
+  }
+  to {
+    top: 30%;
+    left: 58%;
+  }
+}
+
+@keyframes moveDown4 {
+  from {
+    top: 30%;
+    left: 58%;
+  }
+  to {
+    top: 50%;
+    left: 46%;
+  }
+}
+
+@keyframes moveUp5 {
+  from {
+    top: 50%;
+    left: 46%;
+  }
+  to {
+    top: 30%;
+    left: 36%;
+  }
+}
+
+@keyframes moveDown6 {
+  from {
+    top: 30%;
+    left: 36%;
+  }
+  to {
+    top: 50%;
+    left: 24%;
+  }
+}
+
+@keyframes moveUp7 {
+  from {
+    top: 50%;
+    left: 24%;
+  }
+  to {
+    top: 30%;
+    left: 14%;
   }
 }
 
@@ -98,4 +179,144 @@ section::after {
 
 .avocado-animation.fade-in {
   opacity: 1;
+}
+.avocado-container.move-down {
+  animation: moveDown 3s ease-in-out forwards;
+}
+.avocado-container.move-up {
+  animation: moveUp 3s ease-in-out forwards;
+}
+
+.avocado-container.move-up3 {
+  animation: moveUp3 3s ease-in-out forwards;
+}
+
+.avocado-container.move-down4 {
+  animation: moveDown4 3s ease-in-out forwards;
+}
+
+.avocado-container.move-up5 {
+  animation: moveUp5 3s ease-in-out forwards;
+}
+
+.avocado-container.move-down6 {
+  animation: moveDown6 3s ease-in-out forwards;
+}
+
+.avocado-container.move-up7 {
+  animation: moveUp7 3s ease-in-out forwards;
+}
+
+/* Position for the avocado when it should stay on top of the crown */
+.avocado-container.crown-position {
+  top: 30%; /* Position on top of the crown element */
+  left: 14%; /* Match the final position from moveUp7 animation */
+  animation: none; /* Disable any animation */
+}
+
+/* Chat box styles */
+.avocado-chat-box {
+  position: absolute;
+  top: -120px;
+  right: 10px;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Special positioning for chat when at crown position */
+.crown-position .avocado-chat-box {
+  top: -160px;
+}
+
+.chat-bubble {
+  position: relative;
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px 15px;
+  max-width: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  animation: bobUp 1.5s ease-in-out infinite;
+}
+
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  transform: rotate(45deg) translateX(-50%);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bobUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Wheat counter styles */
+.wheat-counter {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--color-yellow);
+  box-shadow: 3px 4px 0 1px #ada02a;
+  border-radius: 12px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  z-index: 100;
+}
+
+.wheat-counter .icon-wheat {
+  font-size: 24px;
+}
+
+.wheat-counter .count {
+  font-size: 18px;
+}
+
+.wheat-counter .wheat-increment {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  color: var(--color-green);
+  font-weight: bold;
+  animation: floatUp 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
 }
