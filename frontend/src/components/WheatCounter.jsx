@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const WheatCounter = ({ visitedSteps }) => {
-  const [wheatCount, setWheatCount] = useState(0);
+  const [wheatCount, setWheatCount] = useState(() => {
+    return localStorage.getItem("wheatBalance") || 0;
+  });
   const [showIncrement, setShowIncrement] = useState(false);
 
   // Update wheat count when visited steps change
@@ -15,7 +17,7 @@ const WheatCounter = ({ visitedSteps }) => {
       setShowIncrement(true);
       setTimeout(() => setShowIncrement(false), 1500); // Animation duration
     }
-
+    localStorage.setItem("wheatBalance", newWheatCount);
     setWheatCount(newWheatCount);
   }, [visitedSteps, wheatCount]);
 
