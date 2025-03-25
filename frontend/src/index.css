@@ -68,7 +68,7 @@ section::after {
 .avocado-container {
   position: fixed;
   opacity: 1;
-  top: 50%;
+  top: 52%;
   left: 150%;
   animation: moveToCenter 3s ease-in-out forwards;
 }
@@ -87,82 +87,82 @@ section::after {
     opacity: 0;
   }
   to {
-    left: 90%;
+    left: 82%;
     opacity: 1;
   }
 }
 @keyframes moveUp {
   from {
-    top: 50%;
-    left: 90%;
+    top: 52%;
+    left: 82%;
   }
   to {
-    top: 30%;
-    left: 80%;
+    top: 33%;
+    left: 72%;
   }
 }
 @keyframes moveDown {
   from {
-    top: 30%;
-    left: 80%;
+    top: 33%;
+    left: 72%;
   }
   to {
-    top: 50%;
-    left: 68%;
+    top: 53%;
+    left: 63%;
   }
 }
 
 @keyframes moveUp3 {
   from {
-    top: 50%;
-    left: 68%;
+    top: 53%;
+    left: 63%;
   }
   to {
-    top: 30%;
-    left: 58%;
+    top: 33%;
+    left: 53%;
   }
 }
 
 @keyframes moveDown4 {
   from {
-    top: 30%;
-    left: 58%;
+    top: 33%;
+    left: 53%;
   }
   to {
-    top: 50%;
-    left: 46%;
+    top: 53%;
+    left: 43%;
   }
 }
 
 @keyframes moveUp5 {
   from {
-    top: 50%;
-    left: 46%;
+    top: 53%;
+    left: 43%;
   }
   to {
-    top: 30%;
-    left: 36%;
+    top: 33%;
+    left: 33%;
   }
 }
 
 @keyframes moveDown6 {
   from {
-    top: 30%;
-    left: 36%;
+    top: 33%;
+    left: 33%;
   }
   to {
-    top: 50%;
-    left: 24%;
+    top: 53%;
+    left: 23%;
   }
 }
 
 @keyframes moveUp7 {
   from {
-    top: 50%;
-    left: 24%;
+    top: 53%;
+    left: 23%;
   }
   to {
-    top: 30%;
+    top: 33%;
     left: 14%;
   }
 }
@@ -209,7 +209,7 @@ section::after {
 
 /* Position for the avocado when it should stay on top of the crown */
 .avocado-container.crown-position {
-  top: 30%; /* Position on top of the crown element */
+  top: 33%;
   left: 14%; /* Match the final position from moveUp7 animation */
   animation: none; /* Disable any animation */
 }

@@ -36,7 +36,7 @@ const Home = () => {
   };
 
   return (
-    <section className="home">
+    <section className="home mt-[-100px] ">
       <WheatCounter visitedSteps={visitedSteps} />
       <Module
         onStepClick={handleStepClick}

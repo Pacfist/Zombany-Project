@@ -20,7 +20,7 @@ const Module = ({ onStepClick, length, onVisitedChange }) => {
           key={index}
           index={index}
           onStepClick={onStepClick}
-          positionX={index * stepSpacing} // Move left progressively
+          positionX={index * stepSpacing + 100} // Move left progressively
           positionY={index % 2 === 0 ? 100 : -100} // Zig-zag pattern
           finalElement={index === length - 1}
           visited={visited}
@@ -30,7 +30,7 @@ const Module = ({ onStepClick, length, onVisitedChange }) => {
       {Array.from({ length: length - 1 }).map((_, index) => (
         <Path
           key={index}
-          positionX={index * 200} // Move left progressively
+          positionX={index * 200 + 100} // Move left progressively
           positionY={index * 200}
           index={index}
           visited={visited[index]}
