@@ -44,7 +44,7 @@ const Header = () => {
           <span className={`block w-6 h-1 bg-gray-700 rounded my-1 transition-all ${open ? "opacity-0 z-50" : ""}`}></span>
           <span className={`block w-6 h-1 bg-gray-700 rounded transition-all ${open ? "-rotate-45 -translate-y-2 z-50" : ""}`}></span>
         </button>
-        <div className={`fixed top-0 right-0 h-full w-64 bg-[#F5F5DC] text-black p-5 transform ${open ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}>
+        <div className={`fixed z-50 top-0 right-0 h-full w-64 bg-[#F5F5DC] text-black p-5 transform ${open ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}>
           <button className="absolute top-5 right-5 text-2xl" onClick={() => setOpen(false)}></button>
           <ul className="mt-18 space-y-10 pr-2">
             <a href="/" className='flex justify-start items-center text-{12px} gap-7 font-bold ml-1'>
