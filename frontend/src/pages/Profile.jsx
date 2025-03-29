@@ -4,7 +4,7 @@ import profilePic from "../public/icons/avocado1.svg"; // ✅ Move this to asset
 const Profile = () => {
     const [name, setName] = useState("Avocado Andy");
     const [weight, setWeight] = useState(72);
-    const [points, setPoints] = useState(120);
+    const [points, setPoints] = useState(40);
     const [foodPreference, setFoodPreference] = useState("");
     const [submitted, setSubmitted] = useState(false);
     const [editing, setEditing] = useState(false);

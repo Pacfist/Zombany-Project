@@ -1,7 +1,14 @@
 import React from "react";
 
-const Modal = ({ stepStatus, onClose, content }) => {
+const Modal = ({ stepStatus, onClose, onComplete, content }) => {
   if (!stepStatus) return null;
+
+  const handleComplete = () => {
+    if (onComplete) {
+      onComplete();
+    }
+    onClose();
+  };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-[1000]">
@@ -17,11 +24,18 @@ const Modal = ({ stepStatus, onClose, content }) => {
           </button>
         </div>
 
-        <div className="modal-content">
+        <div className="modal-content mb-6">
           <div className="whitespace-pre-line">
             {content || "No content available"}
           </div>
         </div>
+
+        <button
+          onClick={handleComplete}
+          className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded w-full"
+        >
+          Made it!
+        </button>
       </div>
     </div>
   );
