@@ -1,0 +1,128 @@
+import React, { useRef, useState } from "react";
+import Webcam from "react-webcam";
+import axios from "axios";
+import Header from "../components/Header";
+
+const ScannerPage = () => {
+  const webcamRef = useRef(null);
+  const [image, setImage] = useState(null);
+  const [foodName, setFoodName] = useState("");
+  const [result, setResult] = useState("");
+  const [nutrition, setNutrition] = useState([]);
+
+  // Function to recognize food using CalorieNinjas API
+  const recognizeFood = async (foodName) => {
+    try {
+      setResult("Recognizing...");
+      const apiUrl = `https://api.calorieninjas.com/v1/nutrition?query=${foodName}`;
+
+      const response = await axios.get(apiUrl, {
+        headers: {
+          "X-Api-Key": "hIZc/vilUVkgMSAPFrERig==xiYQwZ4QRF5AYf8Z",
+        },
+      });
+
+      if (response.data.items && response.data.items.length > 0) {
+        setResult(`Nutrition Facts for: ${foodName}`);
+        setNutrition(response.data.items);
+      } else {
+        setResult("Food not recognized. Please try again.");
+      }
+    } catch (error) {
+      console.log("Error: ", error);
+      setResult("Error with recognition");
+    }
+  };
+
+  // Capture the image from webcam
+  const capture = () => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    setImage(imageSrc);
+  };
+
+  // Handle form submission to recognize food
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (foodName.trim() !== "") {
+      recognizeFood(foodName);
+    } else {
+      setResult("Please enter a food name.");
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-start p-4 bg-gray-50 overflow-y-auto">
+      <Header />
+      <h1 className="text-2xl font-bold mb-4">Food Nutrition Scanner</h1>
+
+      <div className="relative w-full max-w-md bg-gray-300 rounded-lg overflow-hidden mb-4">
+        <Webcam
+          ref={webcamRef}
+          className="w-full h-64 object-cover"
+          screenshotFormat="image/jpeg"
+        />
+      </div>
+
+      <button
+        onClick={capture}
+        className="mb-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+      >
+        Take a picture
+      </button>
+
+      {image && (
+        <form onSubmit={handleSubmit} className="mt-4 flex flex-col items-center">
+          <label className="mb-2">Enter Food Name:</label>
+          <input
+            type="text"
+            value={foodName}
+            onChange={(e) => setFoodName(e.target.value)}
+            placeholder="e.g., Banana"
+            className="px-4 py-2 border rounded mb-2 w-64"
+            required
+          />
+          <button
+            type="submit"
+            className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+          >
+            Get Nutrition Info
+          </button>
+        </form>
+      )}
+
+      {result && (
+        <div className="mt-4 text-center w-full max-w-md">
+          <h2 className="text-xl font-semibold mb-2">{result}</h2>
+          {nutrition.length > 0 && (
+            <div className="overflow-x-auto max-w-full">
+              <table className="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-200">
+                    <th className="border px-4 py-2">Food Item</th>
+                    <th className="border px-4 py-2">Calories (kcal)</th>
+                    <th className="border px-4 py-2">Protein (g)</th>
+                    <th className="border px-4 py-2">Carbs (g)</th>
+                    <th className="border px-4 py-2">Fat (g)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {nutrition.map((item, index) => (
+                    <tr key={index} className="bg-white">
+                      <td className="border px-4 py-2">{item.name}</td>
+                      <td className="border px-4 py-2">{item.calories}</td>
+                      <td className="border px-4 py-2">{item.protein_g}</td>
+                      <td className="border px-4 py-2">{item.carbohydrates_total_g}</td>
+                      <td className="border px-4 py-2">{item.fat_total_g}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ScannerPage;

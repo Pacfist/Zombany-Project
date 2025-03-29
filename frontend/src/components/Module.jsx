@@ -19,7 +19,7 @@ const Module = ({ onStepClick, length, onVisitedChange }) => {
         <Step
           key={index}
           index={index}
-          onStepClick={onStepClick}
+          onStepClick={(isCrown) => onStepClick(isCrown, index)}
           positionX={index * stepSpacing + 100} // Move left progressively
           positionY={index % 2 === 0 ? 100 : -100} // Zig-zag pattern
           finalElement={index === length - 1}

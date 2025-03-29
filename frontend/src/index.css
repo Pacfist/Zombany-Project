@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 @import "tailwindcss";
+
 body {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
 .layout {
   width: 100%;
-  height: 100dvh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-y: auto;
+  /* Allows vertical scrolling */
   position: relative;
   font-family: "Inter", sans-serif;
   background-image: url("/images/background.png");
@@ -15,22 +18,26 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 main {
   /* 
   margin-top: -100px; */
   width: 100%;
   height: 100%;
 }
+
 .container {
   max-width: 1700px;
   margin: 0 auto;
   padding: 0px 10px;
 }
+
 section {
   height: 100dvh;
   width: 100%;
   position: relative;
 }
+
 section::before {
   content: "";
   position: absolute;
@@ -52,15 +59,18 @@ section::after {
   height: 70%;
   background-color: #00000010;
 }
+
 :root {
   --color-yellow: #ffeb3b;
   --color-blue: #03a9f4;
   --color-green: #4caf50;
   --color-orange: #ff9800;
 }
+
 .custom-shadow {
   box-shadow: 4px 6px 0 1px #ada02a;
 }
+
 .visited-shadow {
   box-shadow: 4px 6px 0 1px #aa5d04;
 }
@@ -83,29 +93,35 @@ section::after {
     left: 150%;
     opacity: 0;
   }
+
   80% {
     opacity: 0;
   }
+
   to {
     left: 82%;
     opacity: 1;
   }
 }
+
 @keyframes moveUp {
   from {
     top: 52%;
     left: 82%;
   }
+
   to {
     top: 33%;
     left: 72%;
   }
 }
+
 @keyframes moveDown {
   from {
     top: 33%;
     left: 72%;
   }
+
   to {
     top: 53%;
     left: 63%;
@@ -117,6 +133,7 @@ section::after {
     top: 53%;
     left: 63%;
   }
+
   to {
     top: 33%;
     left: 53%;
@@ -128,6 +145,7 @@ section::after {
     top: 33%;
     left: 53%;
   }
+
   to {
     top: 53%;
     left: 43%;
@@ -139,6 +157,7 @@ section::after {
     top: 53%;
     left: 43%;
   }
+
   to {
     top: 33%;
     left: 33%;
@@ -150,6 +169,7 @@ section::after {
     top: 33%;
     left: 33%;
   }
+
   to {
     top: 53%;
     left: 23%;
@@ -161,6 +181,7 @@ section::after {
     top: 53%;
     left: 23%;
   }
+
   to {
     top: 33%;
     left: 14%;
@@ -180,9 +201,11 @@ section::after {
 .avocado-animation.fade-in {
   opacity: 1;
 }
+
 .avocado-container.move-down {
   animation: moveDown 3s ease-in-out forwards;
 }
+
 .avocado-container.move-up {
   animation: moveUp 3s ease-in-out forwards;
 }
@@ -210,8 +233,10 @@ section::after {
 /* Position for the avocado when it should stay on top of the crown */
 .avocado-container.crown-position {
   top: 33%;
-  left: 14%; /* Match the final position from moveUp7 animation */
-  animation: none; /* Disable any animation */
+  left: 14%;
+  /* Match the final position from moveUp7 animation */
+  animation: none;
+  /* Disable any animation */
 }
 
 /* Chat box styles */
@@ -257,6 +282,7 @@ section::after {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -264,10 +290,12 @@ section::after {
 }
 
 @keyframes bobUp {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
@@ -312,9 +340,11 @@ section::after {
     opacity: 0;
     transform: translateY(0);
   }
+
   20% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translateY(-30px);
